@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.params=nombreTarea
+comment0.target=Tarea(java.lang.String)
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ Tarea\r\n
+comment1.params=estadoTarea
+comment1.target=void\ cambiarEstadoTarea(boolean)
+comment2.params=
+comment2.target=java.lang.String\ getNombreTarea()
+comment3.params=
+comment3.target=void\ cambiarEstado()
+numComments=4
