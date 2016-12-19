@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.time.LocalDate;
 /**
  * Write a description of class ListaTareas here.
  * 
@@ -43,7 +44,44 @@ public class ListaTareas
            
         }
     }
-
+   
+    public void mostrarCoincidentes (String textoABuscar){
+     int posicion = 0;
+     while(posicion < listaDeTareas.size()){
+         Tarea tareaActual = listaDeTareas.get(posicion);
+         if (tareaActual.getNombreTarea().contains(textoABuscar)){
+             
+             System.out.println((posicion + 1) + " " + " " + tareaActual.toString());
+            } 
+         posicion++;
+        }
         
+    }
     
+    public void eliminarTarea (int posicion){
+        int posicionReal = posicion - 1;
+        if(posicionReal >= 0 && posicionReal < listaDeTareas.size()){
+            listaDeTareas.remove(posicionReal);
+        }
+    }
+        
+   public void establecerNuevaPrioridad (int posicion, int nuevaPrioridad) {
+       int posicionReal = posicion -1;
+       if (posicionReal >= 0 && posicionReal < listaDeTareas.size()){
+           if (nuevaPrioridad >= 0 && nuevaPrioridad <= 5){
+              listaDeTareas.get(posicionReal).cambiarPrioridad(nuevaPrioridad); 
+            }
+        }
+       
+    }
+    
+    public void establecerFechaFin(int dia , int mes , int año , int posicion){
+       int posicionReal = posicion - 1;
+       if(posicionReal >= 0 && posicionReal < listaDeTareas.size()){
+           listaDeTareas.get(posicionReal).establecerFechaVencimiento(dia,mes,año);
+        }
+       
+        
+    }
+   
 }
